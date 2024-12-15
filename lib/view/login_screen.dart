@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mvvm_architecture/utils/utils.dart';
 
-import '../utils/routes/routes_name.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -21,7 +21,10 @@ class _LoginScreenState extends State<LoginScreen> {
               //   context,
               //   MaterialPageRoute(builder: (context) => const HomeScreen())
               //   );
-              Navigator.pushNamed(context, RoutesName.home);
+              // Navigator.pushNamed(context, RoutesName.home);
+                Utils.toastMessage("No internet connection");
+              // Utils.flushBarErrorMessage("message", context);
+              // Utils.snackBar("No internet connection", context);
             },
             child: const Text('Login')),
       ),
