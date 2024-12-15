@@ -39,6 +39,7 @@ class NetworkApiServices extends BaseApiServices {
           .timeout(const Duration(seconds: 10));
 
       // Process and validate the response using the returnResponse method
+      //
       responseJson = returnResponse(response);
     } on SocketException {
       // Handle no internet connection scenarios
