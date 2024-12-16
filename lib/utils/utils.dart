@@ -15,4 +15,10 @@ class Utils {
       textColor: Colors.white,
     );
   }
+   static snackBar(String message, BuildContext context) {
+    return ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      backgroundColor: Colors.redAccent, // Sets the background color of the SnackBar.
+      content: Text(message), // The main content of the SnackBar.
+    ));
+  }
 }
