@@ -4,7 +4,6 @@ import '../res/components/round_button.dart';
 import '../utils/utils.dart';
 import 'package:provider/provider.dart';
 
-
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -13,7 +12,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-
   final ValueNotifier<bool> _obscurePassword = ValueNotifier<bool>(true);
 
   final TextEditingController _emailController = TextEditingController();
@@ -48,7 +46,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-
     final authViewModel = Provider.of<AuthViewModel>(context);
 
     final height = MediaQuery.of(context).size.height * 1;
@@ -115,6 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: height * .1),
               RoundButton(
                 title: 'Login',
+                loading: authViewModel.loading,
                 onPress: () {
                   if (_emailController.text.isEmpty) {
                     Utils.toastMessage('Please enter Email');
@@ -123,16 +121,21 @@ class _LoginScreenState extends State<LoginScreen> {
                   } else if (_passwordController.text.length < 6) {
                     Utils.toastMessage('Please enter 6 digit password');
                   } else {
-                    Map data ={
+                    Map data = {
                       'email': _emailController.text.toString(),
                       'password': _passwordController.text.toString()
-                      
                     };
-                    authViewModel.loginApi(data , context);
+                    authViewModel.loginApi(data, context);
                     print('Api Hit');
                   }
                 },
               ),
+              SizedBox(
+                height: height * 0.02,
+              ),
+              const InkWell(
+                child: Text('Don’t have an account?  Sign Up'),
+              )
             ]),
       ),
     );
