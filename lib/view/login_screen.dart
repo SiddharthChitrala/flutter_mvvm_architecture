@@ -21,6 +21,30 @@ class _LoginScreenState extends State<LoginScreen> {
   FocusNode passwordFocusNode = FocusNode();
 
   @override
+  void dispose() {
+    // Disposes the TextEditingController associated with the email input field
+    // to release resources like memory and listeners.
+    _emailController.dispose();
+
+    // Disposes the TextEditingController associated with the password input field
+    // to release resources like memory and listeners.
+    _passwordController.dispose();
+
+    // Disposes the FocusNode for the email input field to clean up focus-related resources.
+    emailFocusNote.dispose();
+
+    // Disposes the FocusNode for the password input field to clean up focus-related resources.
+    passwordFocusNode.dispose();
+
+    // Disposes the ValueNotifier (_obscurePassword) to release any listeners and free resources.
+    _obscurePassword.dispose();
+
+    // Calls the superclass's dispose method to ensure proper cleanup of resources
+    // managed by the parent class.
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height * 1;
 
@@ -92,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   } else if (_passwordController.text.isEmpty) {
                     Utils.toastMessage('Please enter Password');
                   } else if (_passwordController.text.length < 6) {
-                             Utils.toastMessage('Please enter 6 digit password');
+                    Utils.toastMessage('Please enter 6 digit password');
                   } else {
                     Utils.toastMessage('Login Successfull');
                   }
