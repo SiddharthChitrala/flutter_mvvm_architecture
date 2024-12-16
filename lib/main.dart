@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mvvm_architecture/utils/routes/routes.dart';
 import 'package:flutter_mvvm_architecture/utils/routes/routes_name.dart';
 import 'package:flutter_mvvm_architecture/vm/auth_view_model.dart';
+import 'package:flutter_mvvm_architecture/vm/user_view_model.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -17,16 +18,18 @@ class MyApp extends StatelessWidget {
         providers: [
           ChangeNotifierProvider(
             create: (_) => AuthViewModel(),
+          ),
+          ChangeNotifierProvider(
+            create: (_) => UserViewModel(),
           )
         ],
-     
         child: MaterialApp(
           title: 'Flutter Demo',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          initialRoute: RoutesName.login,
+          initialRoute: RoutesName.splash,
           onGenerateRoute: Routes.generateRoute,
         ));
   }
