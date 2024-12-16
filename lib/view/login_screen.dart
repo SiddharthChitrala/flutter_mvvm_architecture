@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
+import 'package:flutter_mvvm_architecture/vm/auth_view_model.dart';
 import '../res/components/round_button.dart';
 import '../utils/utils.dart';
+import 'package:provider/provider.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -12,10 +13,11 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  ValueNotifier<bool> _obscurePassword = ValueNotifier<bool>(true);
 
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final ValueNotifier<bool> _obscurePassword = ValueNotifier<bool>(true);
+
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   FocusNode emailFocusNote = FocusNode();
   FocusNode passwordFocusNode = FocusNode();
@@ -46,6 +48,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+    final authViewModel = Provider.of<AuthViewModel>(context);
+
     final height = MediaQuery.of(context).size.height * 1;
 
     return Scaffold(
@@ -118,7 +123,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   } else if (_passwordController.text.length < 6) {
                     Utils.toastMessage('Please enter 6 digit password');
                   } else {
-                    Utils.toastMessage('Login Successfull');
+                    Map data ={
+                      'email': _emailController.text.toString(),
+                      'password': _passwordController.text.toString()
+                      
+                    };
+                    authViewModel.loginApi(data , context);
+                    print('Api Hit');
                   }
                 },
               ),
