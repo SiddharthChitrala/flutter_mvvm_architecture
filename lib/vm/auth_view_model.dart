@@ -21,7 +21,7 @@ class AuthViewModel with ChangeNotifier {
       setLoading(true);
 
       print(value.toString());
-      Utils.toastMessage('Authentication successful.');
+      Utils.toastMessage('You have logged in successfully.');
       Navigator.pushReplacementNamed( context , RoutesName.home);
     }).onError((error, stackTrace) {
       setLoading(false);
@@ -29,5 +29,20 @@ class AuthViewModel with ChangeNotifier {
       print(error.toString());
     });
   }
-  
+
+   Future<void> registerApi(dynamic data, BuildContext context) async {
+    setLoading(true);
+    _myRepo.registerApi(data).then((value) {
+      setLoading(true);
+
+      print(value.toString());
+      Utils.toastMessage('You have registered in successfully.');
+      Navigator.pushReplacementNamed( context , RoutesName.home);
+    }).onError((error, stackTrace) {
+      setLoading(false);
+      Utils.toastMessage(error.toString());
+      print(error.toString());
+    });
+  }
+
 }
