@@ -65,6 +65,20 @@ lib/
 
 ---
 
+## Setup Project Structure
+
+To set up the MVVM structure in your Flutter project, run the following commands:
+
+```bash
+mkdir -p lib/data/{network,response}
+mkdir -p lib/models
+mkdir -p lib/provider
+mkdir -p lib/res/{components}
+mkdir -p lib/utils/{routes}
+mkdir -p lib/view
+mkdir -p lib/vm/{services}
+
+
 ## 📦 Dependencies
 
 Add the following dependencies to your `pubspec.yaml`:
