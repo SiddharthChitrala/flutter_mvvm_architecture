@@ -119,7 +119,7 @@ The app uses the `Provider` package to manage state efficiently between UI and V
 
 | Home Screen                        | Login Screen                        | Sign Up Screen                  |
 |-----------------------------------|------------------------------------|----------------------------------------|
-| ![Home](assets/images/home_screen.png)  | ![Login](assets/images/login_screen.png) | ![Login](assets/images/signup_screen.png) |
+| ![Home](assets/images/home_screen.png)  | ![Login](assets/images/login_screen.png) | ![Signup](assets/images/Signup_screen.png) |
 
 ---
 
