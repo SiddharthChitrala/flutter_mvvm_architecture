@@ -167,6 +167,6 @@ This project is licensed.
 ---
 
 ## 👨‍💻 Author
-- **Your Name**
-- GitHub: [Your GitHub Profile](https://github.com/SiddharthChitrala)
+- **Siddharth Chitrala**
+- GitHub: [Siddharth Chitrala](https://github.com/SiddharthChitrala)
 - Email: chitrala.saisiddharthkumar7@gmail.com
