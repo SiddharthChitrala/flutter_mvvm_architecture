@@ -73,8 +73,11 @@ Add the following dependencies to your `pubspec.yaml`:
 dependencies:
   flutter:
     sdk: flutter
-  provider: ^6.0.5    # State management
-  http: ^0.14.0       # HTTP requests for API calls
+  http: ^1.2.2   
+  fluttertoast: ^8.2.10   
+  another_flushbar: ^1.12.30   
+  provider: ^6.1.2
+  shared_preferences: ^2.3.3
 ```
 
 ---
