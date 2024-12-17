@@ -65,7 +65,7 @@ lib/
 
 ---
 
-## Setup Project Structure
+##  🗂️ Setup Project Structure
 
 To set up the MVVM structure in your Flutter project, run the following commands:
 
