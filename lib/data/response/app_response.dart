@@ -12,10 +12,10 @@ class ApiResponse<T> {
   ApiResponse.loading() : status = Status.LOADING;
 
   // Factory constructor to create a completed response
-  ApiResponse.completed() : status = Status.COMPLETED;
+  ApiResponse.completed(this.data) : status = Status.COMPLETED;
 
   // Factory constructor to create an error response
-  ApiResponse.error() : status = Status.ERROR;
+  ApiResponse.error(this.message) : status = Status.ERROR;
 
   // Override toString for easy debugging and logging
   @override
