@@ -159,11 +159,11 @@ Contributions are welcome! Feel free to fork this repository and submit a pull r
 ---
 
 ## 📜 License
-This project is licensed under the MIT License.
+This project is licensed.
 
 ---
 
 ## 👨‍💻 Author
 - **Your Name**
-- GitHub: [Your GitHub Profile](https://github.com/your-username)
-- Email: your-email@example.com
+- GitHub: [Your GitHub Profile](https://github.com/SiddharthChitrala)
+- Email: chitrala.saisiddharthkumar7@gmail.com
