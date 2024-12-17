@@ -88,14 +88,14 @@ Add the following dependencies to your `pubspec.yaml`:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.2.2   
-  fluttertoast: ^8.2.10   
-  another_flushbar: ^1.12.30   
-  provider: ^6.1.2
-  shared_preferences: ^2.3.3
-```
+    http: ^1.2.2   
+    fluttertoast: ^8.2.10   
+    another_flushbar: ^1.12.30   
+    provider: ^6.1.2
+    shared_preferences: ^2.3.3
+`````````
 
----
+-------
 
 ## 🛠️ How to Run
 
