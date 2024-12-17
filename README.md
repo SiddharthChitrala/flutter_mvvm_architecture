@@ -78,6 +78,7 @@ mkdir -p lib/utils/{routes}
 mkdir -p lib/view
 mkdir -p lib/vm/{services}
 
+```
 
 ## 📦 Dependencies
 
